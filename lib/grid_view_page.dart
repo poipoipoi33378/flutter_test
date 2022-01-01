@@ -13,8 +13,27 @@ class _GridViewPageState extends State<GridViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          FloatingActionButton(
+            onPressed: () {},
+            child: Icon(
+              Icons.grid_on,
+              color: Colors.white,
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          FloatingActionButton(
+            onPressed: () {},
+            child: Icon(
+              Icons.grid_off,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
